@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+  {% block content %}
+  <form>
+    <fieldset>
+     <legend><b>Biographical Information</b></legend><br>
+   <div>
+    <label for="gender">First Name: </label>
+         <input type="text" placeholder="" required><br><br>
+     <label for="gender">Last Name: </label>
+         <input type="text" placeholder="" required><br><br>
+     <label for="gender">Email address: </label>
+         <input type="email" placeholder="" required><br><br>
+    <label for="gender">Home address: </label>
+          <input type="text" placeholder="" required><br><br>
+    <label for="gender">Gender: </label>
+         <input class="gender" type="radio" name="gender" value="male"/>Male
+         <input class="gender"  type="radio" name="gender" value="female">Female<br><br>
+    <label for="date">Birth Date: </label>
+         <input type="date" required><br><br>       
+    <label for="university_list">University Name: </label>
+      <select id="university" name="university">
+         <option id="default">SELECT</option>
+         <option>Kigali Conference 2024</option>
+         <option>Kampala Conference 2029</option>
+         <option>Nairobi Conference 2025</option>
+         <option>Bujumbura Conference 2023</option>
+         <option>Kinshasa Conference 2028</option>
+         <option>Lagos Conference 2027</option>
+      </select><br><br>
+      <label for="modules">Conference Topics: <br></label>
+         <input type="checkbox" name="modules">IT in Future of World<br>
+         <input type="checkbox" name="modules">Bridge To Success<br>
+         <input type="checkbox" name="modules">Business in Industry<br>
+         <input type="checkbox" name="modules">Artificial Intelligence<br>
+         <input type="checkbox" name="modules">Youth Impact Mission<br>
+         <input type="checkbox" name="modules">Global Warming<br><br>
+       <br>
+      <input class="button" type="submit" value="Register"/> <br>        
+   </div>
+ </fieldset> 
+ </form><br>
+ <style>
+    fieldset{
+       background-color: pink;
+       margin-right: auto;
+       margin-left: auto;
+       display: block;
+       width: 65%;
+       border: 4px solid purple;
+       border-radius: 10px;
+       box-shadow: 3px 12px 15px green;
+       padding-bottom: 6px;
+    }
+    body{
+       background-color: whitesmoke;
+    }
+    input{
+       border-radius: 5px;
+       border: 0px solid grey;
+       padding: 4px;
+       box-shadow: 2px 5px 6px;
+    }
+    .button{
+        margin-left: 50px;
+    }
+    .button:hover{
+        background-color: grey;
+        color: green;
+    }
+ </style>
+
+  {% endblock content %}

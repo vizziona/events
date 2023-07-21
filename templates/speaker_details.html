@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+ {% block content %}
+
+ {% for info in speakerdetail_list %}
+<!-- Home About Section Begin -->
+<section class="home-about-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="ha-pic">
+                    <img src="{{ info.photo.url}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ha-text">
+                    <h2>{{ info.name }}</h2>
+                    <p>{{ info.biography }}</p>
+                    <ul>
+                        <li><span class="icon_check"></span> {{ info.event_1 }}</li>
+                        <li><span class="icon_check"></span> {{ info.event_2 }}</li>
+                        <li><span class="icon_check"></span> {{ info.event_3 }}</li>
+                        <li><span class="fa fa-twitter"></span> {{ info.twitter_link }}</li>
+                        <li><span class="fa fa-facebook"></span> {{ info.linkedin_link }}</li>
+                        <li><span class="icon_phone"></span> {{ info.phone_number }}</li>
+                        <div style="display: flex;gap: 4px;">
+                            <li><span class="fa fa-star"></span></li>
+                            <li><span class="fa fa-star"></span></li>
+                            <li><span class="fa fa-star"></span></li>
+                            <li><span class="fa fa-star"></span></li>
+                        </div>
+                    </ul>
+                    <a href="" class="ha-btn">Discover Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}  
+</section>
+<!-- Home About Section End -->
+
+{% endblock content %}
